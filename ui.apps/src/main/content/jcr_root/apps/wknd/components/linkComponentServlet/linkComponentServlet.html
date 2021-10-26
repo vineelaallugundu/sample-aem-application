@@ -1,0 +1,13 @@
+
+<sly data-sly-use.model="com.adobe.aem.guides.wknd.core.models.LinkComponentServletModel">
+        <sly data-sly-use.template="core/wcm/components/commons/v1/templates.html" data-sly-test="${model.title}" class="cmp-title">
+            <h1 data-sly-test="${model.title}"> ${model.title}</h1>
+         <h1 data-sly-test="${model.button}"> ${model.buttonLable}</h1>
+            
+        </sly>
+
+    <sly data-sly-test="${!model.title}">
+ 
+        <sly data-sly-call="${template.placeholder @ isEmpty=!text, classAppend='cmp-title'}"></sly>
+    </sly>
+</sly>
